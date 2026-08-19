@@ -260,7 +260,7 @@ export default function MissionControlDashboard() {
                     level={riskAssessment?.risk_level || "LOW"}
                     title="OVERALL MISSION RISK"
                     subtitle={`Primary: ${riskAssessment?.primary_threat || "Drag"}`}
-                    size={210}
+                    size="lg"
                   />
                 </div>
 

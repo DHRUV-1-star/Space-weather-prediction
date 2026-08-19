@@ -119,7 +119,7 @@ export default function MissionRiskPage() {
                 level={riskAssessment?.risk_level || "LOW"}
                 title="MISSION RISK SCORE"
                 subtitle={`Primary Threat: ${riskAssessment?.primary_threat || "Drag"}`}
-                size={230}
+                size="lg"
               />
             </div>
 
