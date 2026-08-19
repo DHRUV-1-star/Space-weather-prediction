@@ -267,6 +267,6 @@ def evaluate_mission_risk(satellite: SatelliteProfile, weather: SpaceWeatherTele
         surface_potential_kv=charge_res["surface_potential_kv"],
         recommendations=recommendations,
         timeline=timeline,
-        inference_mode="Physics-Informed Decision Support Engine",
+        inference_mode=SpaceWeatherMLEngine.get_inference_mode_label(),
         notes="Model output is advisory for mission planning."
     )
