@@ -25,8 +25,8 @@ def calculate_radiation_risk(
       - Aluminum shielding attenuation (exponential absorption)
       - COTS vs Rad-Hard semiconductor sensitivity
     """
-    r_km = EARTH_RADIUS_KM + altitude_km
-    l_shell = r_km / (EARTH_RADIUS_KM * max(0.1, math.cos(math.radians(inclination_deg)) ** 2))
+    r_km = EARTH_RADIUS_KM + max(150.0, altitude_km)
+    l_shell = r_km / EARTH_RADIUS_KM
     
     # 1. Magnetospheric Shielding Cutoff
     # Polar cap exposure: high inclination satellites pass through open field lines with 0 cutoff
