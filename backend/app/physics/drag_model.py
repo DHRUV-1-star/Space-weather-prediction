@@ -91,7 +91,7 @@ def calculate_atmospheric_drag_risk(
             "relative_drag_increase_pct": 0.0,
             "orbit_decay_rate_m_day": 0.01,
             "ballistic_coefficient": mass_kg / max(0.01, drag_coefficient_cd * cross_sectional_area_m2),
-            "physical_summary": "Altitude > 1200 km is above the effective thermospheric drag domain."
+            "physical_explanation": "Altitude > 1200 km is above the effective thermospheric drag domain."
         }
         
     v = get_orbital_velocity(altitude_km)

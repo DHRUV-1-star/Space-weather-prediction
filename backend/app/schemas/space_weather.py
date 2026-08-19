@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Any
 from datetime import datetime
 
 class SpaceWeatherTelemetry(BaseModel):
@@ -52,6 +52,6 @@ class SpaceWeatherForecast(BaseModel):
     flare_forecast: FlareForecast
     geomagnetic_forecast: GeomagneticForecast
     radiation_forecast: RadiationForecast
-    solar_wind_speed_forecast_kms: List[Dict[str, float]] = []
-    kp_forecast_timeline: List[Dict[str, float]] = []
+    solar_wind_speed_forecast_kms: List[Dict[str, Any]] = []
+    kp_forecast_timeline: List[Dict[str, Any]] = []
     is_live_data: bool = False
