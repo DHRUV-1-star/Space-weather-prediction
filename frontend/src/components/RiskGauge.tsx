@@ -57,28 +57,24 @@ export function RiskGauge({ score, level, primaryThreat, title, subtitle, size =
 
       {/* SVG Semi-Circle Dial */}
       <div className="relative w-48 h-28 flex items-end justify-center my-2">
-        <svg className="w-48 h-48 transform -rotate-90 overflow-visible" viewBox="0 0 100 100">
+        <svg className="w-48 h-28 overflow-visible" viewBox="0 0 100 55">
           {/* Background Arc */}
-          <circle
-            cx="50"
-            cy="50"
-            r="40"
+          <path
+            d="M 10 50 A 40 40 0 0 1 90 50"
             fill="none"
             stroke="#1e293b"
             strokeWidth="8"
-            strokeDasharray="125.6 251.2" // Half circle
             strokeLinecap="round"
           />
 
           {/* Active Value Arc */}
-          <circle
-            cx="50"
-            cy="50"
-            r="40"
+          <path
+            d="M 10 50 A 40 40 0 0 1 90 50"
             fill="none"
             className={`transition-all duration-1000 ${getColorClass(level)}`}
             strokeWidth="8"
-            strokeDasharray={`${(normalizedScore / 100) * 125.6} 251.2`}
+            strokeDasharray="125.66"
+            strokeDashoffset={125.66 * (1 - normalizedScore / 100)}
             strokeLinecap="round"
           />
         </svg>
