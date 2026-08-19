@@ -1,0 +1,29 @@
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- Python / backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.log
+.ipynb_checkpoints/
+coverage/
+.tox/
+.pytest_cache/
+
+# Sensitive env files
+.env
+.env.local
+.env.*.local
+
+# Regenerable: large synthetic dataset (rebuilt via the data engine).
+backend/training_data.csv
+
+# NOTE: backend/ml/models/*.joblib are NOT ignored by default so the API works
+# immediately after clone. To keep the repo lean instead, uncomment:
+# backend/ml/models/*.joblib

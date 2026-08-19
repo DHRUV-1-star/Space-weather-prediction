@@ -1,0 +1,11 @@
+# --- deps & build output ---
+node_modules/
+dist/
+.vite/
+*.log
+npm-debug.log*
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/

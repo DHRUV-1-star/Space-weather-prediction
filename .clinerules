@@ -1,0 +1,13 @@
+# Project: Orbital Shield (ISRO Hackathon Space Weather Risk Engine)
+
+## Architecture Rules
+- **Backend:** FastAPI (Python) located in `/backend`
+- **Frontend:** React + Vite + Tailwind CSS + Lucide-React located in `/frontend`
+- **ML / Orbit Math:** Scikit-Learn, XGBoost, NumPy, Pandas, `sgp4`
+- **Visuals:** Canvas API / Three.js for interactive satellite and space weather orbit visualization
+
+## Coding Standards
+1. Keep backend API routes modular in `/backend/routers/` and ML inference in `/backend/ml/`.
+2. Do NOT leave placeholder comments or mock endpoints without actual functional logic.
+3. Use Type hints in Python and clean component separation in React.
+4. Ensure all cross-origin requests (CORS) between frontend (port 5173) and backend (port 8000) are configured.

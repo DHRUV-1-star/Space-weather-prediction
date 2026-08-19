@@ -1,0 +1,42 @@
+{
+  "drag": {
+    "model": "LEODragPredictor",
+    "features": [
+      "f107",
+      "kp",
+      "altitude_km",
+      "mass_kg",
+      "area_m2"
+    ],
+    "metrics": {
+      "rmse_km_per_day": 0.07761983302731207,
+      "mae_km_per_day": 0.004295832919454195,
+      "r2": 0.9869400198515096
+    },
+    "file": "leo_drag_predictor.joblib"
+  },
+  "anomaly": {
+    "classifier": "AnomalyClassifier",
+    "features": [
+      "proton_flux_10mev",
+      "electron_flux_2mev",
+      "kp",
+      "ap",
+      "regime_leo",
+      "regime_meo",
+      "regime_geo"
+    ],
+    "labels": [
+      "seu",
+      "charging"
+    ],
+    "metrics": {
+      "acc_seu": 0.8940104166666667,
+      "auc_seu": 0.7444964096749811,
+      "acc_charging": 0.8221354166666667,
+      "auc_charging": 0.7648588989884726
+    },
+    "file": "anomaly_classifier.joblib"
+  },
+  "n_rows": 19200
+}
